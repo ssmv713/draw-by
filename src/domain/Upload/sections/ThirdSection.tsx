@@ -1,3 +1,4 @@
+import { Mq } from "@/common/theme/screen";
 import { css } from "@emotion/react";
 import { SectionLayout1 } from "../el/SectionLayout1";
 
@@ -16,5 +17,8 @@ const sx = {
   inner: css`
     width: 1000px;
     margin: 0 auto;
+    @media ${Mq.xl} {
+      width: 90%;
+    }
   `,
 };

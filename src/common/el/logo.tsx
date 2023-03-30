@@ -28,3 +28,25 @@ const sx = {
     border-radius: 50%;
   `,
 };
+
+export const PurpleLogo = () => {
+  return (
+    <>
+      <div css={sx.logo}>
+        <div css={ppl.logoImg}></div>
+        <Typography color={Color.BrandMain} variant="body1">
+          DrawBy
+        </Typography>
+      </div>
+    </>
+  );
+};
+
+const ppl = {
+  logoImg: css`
+    width: 30px;
+    height: 30px;
+    background-color: ${Color.BrandMain};
+    border-radius: 50%;
+  `,
+};

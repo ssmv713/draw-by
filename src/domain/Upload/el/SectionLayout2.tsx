@@ -8,6 +8,7 @@ import {
 import { Stack } from "@mui/system";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { css } from "@emotion/react";
+import { Mq } from "@/common/theme/screen";
 
 export type SectionLayoutType = { desc: string };
 
@@ -56,10 +57,18 @@ const sx = {
     gap: 100px;
     align-items: center;
     justify-content: space-between;
+    @media ${Mq.sm} {
+      flex-direction: column;
+      text-align: center;
+      height: auto;
+    }
   `,
   accordion: css`
     width: 400px;
     border: solid 1px ${Color.GrayText2};
+    @media ${Mq.sm} {
+      width: 100%;
+    }
   `,
   summary: css`
     border-bottom: solid 1px #f7f7f7;
