@@ -1,4 +1,4 @@
-import { Pcheader } from "@/common/el/PCheader";
+import { Pcheader } from "@/common/el/Header/PCheader";
 import { Color } from "@/common/theme/colors";
 import { css } from "@emotion/react";
 import { Button, Stack, Typography } from "@mui/material";

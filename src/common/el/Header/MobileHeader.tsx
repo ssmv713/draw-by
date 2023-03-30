@@ -1,4 +1,4 @@
-import { Logo } from "./logo";
+import { Logo } from "../logo";
 import menu from "@/assets/icons/menu.png";
 import Image from "next/image";
 import { css } from "@emotion/react";

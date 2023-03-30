@@ -1,10 +1,10 @@
 import { css } from "@emotion/react";
 import { Typography } from "@mui/material";
-import { Color } from "../theme/colors";
+import { Color } from "../../theme/colors";
 import arrowDown from "@/assets/icons/arrow_down.png";
 import Image from "next/image";
-import { Logo, PurpleLogo } from "./logo";
-import { Mq } from "../theme/screen";
+import { Logo, PurpleLogo } from "../logo";
+import { Mq } from "../../theme/screen";
 import { useEffect, useState } from "react";
 import arrowDown_black from "@/assets/icons/arrowDown_black.png";
 

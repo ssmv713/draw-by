@@ -11,6 +11,7 @@ export enum Color {
   lightPurple = "#F7EBFC",
 
   backgroundGray = "#F7F7F7",
+  chatBackground = "#f7ebfc",
 }
 
 export const lightPalette: PaletteOptions = {};
