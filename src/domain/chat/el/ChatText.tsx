@@ -3,6 +3,7 @@ import { css } from "@emotion/react";
 import { Color } from "@/common/theme/colors";
 import Image from "next/image";
 import profile from "@/assets/images/profile.png";
+import { Mq } from "@/common/theme/screen";
 type chatFromMeType = {
   textFromMe: string;
 };
@@ -27,6 +28,16 @@ const sx = {
   `,
   textFromMeWrap: css`
     justify-content: flex-end;
+    padding: 20px 0;
+    @media ${Mq.sm} {
+      padding: 10px 0;
+    }
+  `,
+  chatFromaIWrap: css`
+    padding: 20px 0;
+    @media ${Mq.sm} {
+      padding: 10px 0;
+    }
   `,
   textFromAI: css`
     border-radius: 0px 20px 20px 20px;
@@ -41,7 +52,7 @@ type ChatFromAIType = {
 };
 export const ChatFromAI = ({ textFromAI }: ChatFromAIType) => {
   return (
-    <Stack direction="row" gap="10px">
+    <Stack direction="row" gap="10px" css={sx.chatFromaIWrap}>
       <Image src={profile} alt="profile" width={40} height={40} />
       <Typography color={Color.WhiteText} css={sx.textFromAI}>
         {textFromAI}

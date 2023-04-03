@@ -1,17 +1,22 @@
-import { Pcheader } from "@/common/el";
 import { css } from "@emotion/react";
-
 import { Color } from "@/common/theme/colors";
-
 import { ChatFromMe } from "./el/ChatText";
 import { ChatFromAI } from "./el/ChatText";
-
 import { ChatFrame } from "./el/CharFrame";
 import { HeaderView } from "@/common/el/Header/HeaderView";
+import character from "@/assets/images/chat_chr.png";
+import Image from "next/image";
 
 export const ChatView = () => {
   return (
     <div css={sx.root}>
+      <Image
+        css={sx.chr}
+        src={character}
+        alt="character"
+        width={300}
+        height={270}
+      />
       <HeaderView />
       <ChatFrame>
         <div>
@@ -41,7 +46,14 @@ const sx = {
     padding-top: 62px;
     position: relative;
   `,
-
+  chr: css`
+    position: absolute;
+    top: 405.005px;
+    left: 78.698vw;
+    @media (max-width: 1760px) {
+      display: none;
+    }
+  `,
   chatBottom: css`
     border: solid 1px #fff;
     padding-left: 20px;

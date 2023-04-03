@@ -32,13 +32,12 @@ export const baseTypographyOptions: TypographyOptions = {
     fontSize: "15px",
   },
   body1: {
-    fontSize: "20", //60
+    fontSize: "20px",
     fontWeight: "500",
   },
   body2: {
-    fontSize: "16", //40
+    fontSize: "16px", //40
     fontWeight: "400",
-    fontFamily: "Noto Sans KR",
   },
 };
 

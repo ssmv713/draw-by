@@ -5,7 +5,11 @@ import { ScreenType } from "./screen";
 import { lightTypographyOptions } from "./Typography";
 
 export const lightTheme = createTheme({
-  palette: lightPalette,
+  palette: {
+    secondary: {
+      main: "#B13FDC", // 사용할 컬러 값
+    },
+  },
   typography: lightTypographyOptions,
   breakpoints: {
     values: {
@@ -33,7 +37,13 @@ export const lightTheme = createTheme({
       },
       styleOverrides: {
         root: {
+          "& .MuiButton-label": {
+            fontSize: "16px",
+          },
           textTransform: "none",
+          "&:hover": {
+            backgroundColor: "#f5f5f5",
+          },
         },
         sizeLarge: {
           padding: "12px",

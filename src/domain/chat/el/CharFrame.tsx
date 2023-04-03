@@ -8,6 +8,7 @@ import send from "@/assets/icons/send.png";
 import { blue } from "@mui/material/colors";
 import { UploadDialog } from "./uploadDialog";
 import { useState } from "react";
+import { Mq, useCustomMediaQuery } from "@/common/theme/screen";
 
 type ChatFrameType = {
   children: React.ReactElement;
@@ -21,6 +22,7 @@ export const ChatFrame = ({ children }: ChatFrameType) => {
   const handleClose = () => {
     setOpen(false);
   };
+  const { isSmall } = useCustomMediaQuery();
 
   return (
     <Stack css={sx.chat}>
@@ -35,7 +37,9 @@ export const ChatFrame = ({ children }: ChatFrameType) => {
           </Typography>
         </Stack>
         <Stack css={sx.openFile} direction="row" alignItems="center" gap="12px">
-          <Typography color={Color.WhiteText}>{"PDF 파일보기"}</Typography>
+          {isSmall ? null : (
+            <Typography color={Color.WhiteText}>{"PDF 파일보기"}</Typography>
+          )}
           <Image src={openIcon} alt="open" width={16} height={16} />
         </Stack>
       </Stack>
@@ -71,7 +75,7 @@ export const ChatFrame = ({ children }: ChatFrameType) => {
 
 const sx = {
   chat: css`
-    width: 1000px;
+    max-width: 1000px;
     margin: 0 auto;
   `,
   topChat: css`
@@ -90,6 +94,9 @@ const sx = {
     padding: 60px;
     border-left: solid 1px #fff;
     border-right: solid 1px #fff;
+    @media ${Mq.sm} {
+      padding: 40px 20px 120px 20px;
+    }
   `,
   chatBottom: css`
     border: solid 1px #fff;
