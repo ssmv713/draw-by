@@ -9,33 +9,20 @@ import pdf from "@/assets/icons/pdf_black.png";
 import Image from "next/image";
 import arrowRight from "@/assets/icons/arrowRight_gray.png";
 import { ManageHeaderView } from "@/common/el/Header/manageHeaderView";
+import { useManageView } from "./el/useManageView";
 
 export const ManageView = () => {
-  const [open, setOpen] = useState(false);
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-  const handleClose = () => {
-    setOpen(false);
-  };
-  const [editOpen, setEditOpen] = useState(false);
-  const handleEditOpen = () => {
-    setEditOpen(true);
-    setOpen(false);
-  };
-  const handleEditClose = () => {
-    setEditOpen(false);
-    setOpen(true);
-  };
-  const [deleteOpen, setDeleteOpen] = useState(false);
-  const handleDeleteOpen = () => {
-    setDeleteOpen(true);
-    setOpen(false);
-  };
-  const handleDeleteClose = () => {
-    setDeleteOpen(false);
-    setOpen(true);
-  };
+  const {
+    open,
+    handleClickOpen,
+    handleClose,
+    editOpen,
+    handleEditOpen,
+    handleEditClose,
+    deleteOpen,
+    handleDeleteOpen,
+    handleDeleteClose,
+  } = useManageView();
   const title = {
     main: "PDF 파일 관리",
     desc: "PDF 파일을 클릭하시면, 파일의 이름을 수정하거나, 파일을 삭제할 수 있어요.",
