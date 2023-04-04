@@ -1,17 +1,20 @@
 import { css } from "@emotion/react";
 
 import { Typography } from "@mui/material";
+import Link from "next/link";
 import { Color } from "../theme/colors";
 
 export const Logo = () => {
   return (
     <>
-      <div css={sx.logo}>
-        <div css={sx.logoImg}></div>
-        <Typography color={Color.WhiteText} variant="body1">
-          DrawBy
-        </Typography>
-      </div>
+      <Link href="/upload">
+        <div css={sx.logo}>
+          <div css={sx.logoImg}></div>
+          <Typography color={Color.WhiteText} variant="body1">
+            DrawBy
+          </Typography>
+        </div>
+      </Link>
     </>
   );
 };

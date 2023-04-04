@@ -9,6 +9,7 @@ export enum Color {
   WhiteText = "#ffffff ",
 
   BrandMain = "#B13FDC",
+  hoverBrandMain = "#8831a8",
   lightPurple = "#F7EBFC",
   Navy = "#1F0B8C",
 

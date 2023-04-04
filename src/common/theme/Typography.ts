@@ -39,6 +39,9 @@ export const baseTypographyOptions: TypographyOptions = {
     fontSize: "16px", //40
     fontWeight: "400",
   },
+  subtitle1: {
+    fontSize: "12px",
+  },
 };
 
 export const darkTypographyOptions: TypographyOptions = {

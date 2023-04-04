@@ -42,13 +42,14 @@ export const ChatView = () => {
 const sx = {
   root: css`
     background-image: url(/assets/bg/chat_bg.png);
+    background-size: cover;
     background-position: center;
     padding-top: 62px;
     position: relative;
   `,
   chr: css`
     position: absolute;
-    top: 405.005px;
+    bottom: 6%;
     left: 78.698vw;
     @media (max-width: 1760px) {
       display: none;

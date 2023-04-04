@@ -60,5 +60,8 @@ const sx = {
     background-color: ${Color.BrandMain};
     color: #fff;
     height: 50px;
+    &:hover {
+      background-color: ${Color.hoverBrandMain};
+    }
   `,
 };

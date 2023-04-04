@@ -7,6 +7,7 @@ import { Logo, PurpleLogo } from "../logo";
 import { Mq } from "../../theme/screen";
 import { useEffect, useState } from "react";
 import arrowDown_black from "@/assets/icons/arrowDown_black.png";
+import Link from "next/link";
 
 export const Pcheader = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -23,28 +24,34 @@ export const Pcheader = () => {
         {scrollPosition < 62 ? <Logo /> : <PurpleLogo />}
         <ul css={sx.nav}>
           <li>
-            <Typography
-              variant="body2"
-              color={scrollPosition < 62 ? Color.WhiteText : Color.BlackText}
-            >
-              업로드
-            </Typography>
+            <Link href="/upload">
+              <Typography
+                variant="body2"
+                color={scrollPosition < 62 ? Color.WhiteText : Color.BlackText}
+              >
+                업로드
+              </Typography>
+            </Link>
           </li>
           <li>
-            <Typography
-              variant="body2"
-              color={scrollPosition < 62 ? Color.WhiteText : Color.BlackText}
-            >
-              채팅
-            </Typography>
-          </li>{" "}
+            <Link href="/chat">
+              <Typography
+                variant="body2"
+                color={scrollPosition < 62 ? Color.WhiteText : Color.BlackText}
+              >
+                채팅
+              </Typography>
+            </Link>
+          </li>
           <li>
-            <Typography
-              variant="body2"
-              color={scrollPosition < 62 ? Color.WhiteText : Color.BlackText}
-            >
-              PDF관리
-            </Typography>
+            <Link href="/manage">
+              <Typography
+                variant="body2"
+                color={scrollPosition < 62 ? Color.WhiteText : Color.BlackText}
+              >
+                PDF관리
+              </Typography>
+            </Link>
           </li>{" "}
           <li>
             <Typography
@@ -80,6 +87,7 @@ const sx = {
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 55;
     &.headerBg {
       background-color: #fff;
       color: ${Color.BlackText};
@@ -101,6 +109,9 @@ const sx = {
   nav: css`
     display: flex;
     gap: 2.083vw;
+    & li {
+      cursor: pointer;
+    }
   `,
   nameBtn: css`
     display: flex;

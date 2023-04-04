@@ -36,16 +36,17 @@ export const MainSection = () => {
               {text.drag}
             </Typography>
           </Stack>
-        </div>
-        <Stack direction="row" gap="20px" alignItems="center">
-          <Stack direction="row" gap="22px" css={sx.fileInput}>
-            <Image src={pdf} alt="pdf" width={20} height={20} />
-            <Typography variant="body2" color={Color.BrandMain}>
-              {text.filename}
-            </Typography>
+
+          <Stack direction="row" gap="20px" alignItems="center">
+            <Stack direction="row" gap="22px" css={sx.fileInput}>
+              <Image src={pdf} alt="pdf" width={20} height={20} />
+              <Typography variant="body2" color={Color.BrandMain}>
+                {text.filename}
+              </Typography>
+            </Stack>
+            <Button css={sx.button}>PDF 생성하기</Button>
           </Stack>
-          <Button css={sx.button}>PDF 생성하기</Button>
-        </Stack>
+        </div>
       </Stack>
     </div>
   );
@@ -54,6 +55,7 @@ export const MainSection = () => {
 const sx = {
   root: css`
     background-image: url(/assets/bg/upload_bg.png);
+    background-size: cover;
     background-position: center;
     height: 700px;
     padding-top: 62px;
@@ -82,6 +84,9 @@ const sx = {
     align-items: center;
     justify-content: center;
     gap: 16px;
+    cursor: pointer;
+
+    background-color: ${Color.lightPurple};
   `,
   purpleText: css`
     font-size: 12px !important;
@@ -90,7 +95,7 @@ const sx = {
   fileInput: css`
     background-color: ${Color.lightPurple};
     width: 100%;
-    padding: 0 12px;
+    padding: 13px;
     border-radius: 10px;
     align-items: center;
     height: 100%;
@@ -103,5 +108,8 @@ const sx = {
     font-size: 15px;
     border-radius: 10px;
     line-height: 26px;
+    &:hover {
+      background-color: ${Color.hoverBrandMain};
+    }
   `,
 };

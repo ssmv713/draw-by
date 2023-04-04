@@ -36,7 +36,7 @@ export const UploadDialog = ({ open, onClose }: UploadDialogType) => {
               <Stack gap="11px">
                 <Stack direction="row" alignItems="center" gap="12px">
                   <Image src={pdf} alt="file" width={24} height={24} />
-                  <Typography color={Color.BlackText} variant="h5">
+                  <Typography color={Color.BlackText} variant="body1">
                     {it.filename}
                   </Typography>
                 </Stack>
@@ -59,9 +59,8 @@ export const UploadDialog = ({ open, onClose }: UploadDialogType) => {
 const sx = {
   root: css`
     .MuiPaper-root {
-      min-width: 822px;
       box-sizing: border-box;
-      @media ${Mq.lg} {
+      @media ${Mq.sm} {
         min-width: 90%;
       }
     }

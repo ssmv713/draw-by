@@ -33,7 +33,10 @@ export const LoginView = () => {
         </Typography>
         <Stack css={sx.snsWrap}>
           {SNSModels.map((it, index) => (
-            <Button css={sx.button(it.bgColor, it.border)} key={index}>
+            <Button
+              css={sx.button(it.bgColor, it.border, it.hoverColor)}
+              key={index}
+            >
               <Image
                 css={sx.logo}
                 src={it.logo}
@@ -56,6 +59,7 @@ export const LoginView = () => {
 const sx = {
   root: css`
     background-image: url(/assets/bg/login_bg.png);
+    background-size: cover;
     background-position: center;
     width: 100%;
     height: 100vh;
@@ -79,7 +83,7 @@ const sx = {
   snsWrap: css`
     gap: 20px;
   `,
-  button: (bgColor: string, border?: string) => css`
+  button: (bgColor: string, border?: string, hoverColor?: string) => css`
     background: ${bgColor};
     display: flex;
     align-items: center;
@@ -88,6 +92,9 @@ const sx = {
     justify-content: flex-start;
     position: relative;
     border: ${border};
+    &:hover {
+      background-color: ${hoverColor};
+    }
   `,
   logo: css`
     position: absolute;
