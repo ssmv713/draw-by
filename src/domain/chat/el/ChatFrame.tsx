@@ -1,4 +1,11 @@
-import { Button, Input, Stack, TextField, Typography } from "@mui/material";
+import {
+  Button,
+  Input,
+  Stack,
+  TextareaAutosize,
+  TextField,
+  Typography,
+} from "@mui/material";
 import Image from "next/image";
 import { Color } from "@/common/theme/colors";
 import { css } from "@emotion/react";
@@ -36,12 +43,19 @@ export const ChatFrame = ({ children }: ChatFrameType) => {
             {"filename 와(과) AI 채팅 중"}
           </Typography>
         </Stack>
-        <Stack css={sx.openFile} direction="row" alignItems="center" gap="12px">
-          {isSmall ? null : (
-            <Typography color={Color.WhiteText}>{"PDF 파일보기"}</Typography>
-          )}
-          <Image src={openIcon} alt="open" width={16} height={16} />
-        </Stack>
+        <Button css={sx.pdfButton}>
+          <Stack
+            css={sx.openFile}
+            direction="row"
+            alignItems="center"
+            gap="12px"
+          >
+            {isSmall ? null : (
+              <Typography color={Color.WhiteText}>{"PDF 파일보기"}</Typography>
+            )}
+            <Image src={openIcon} alt="open" width={16} height={16} />
+          </Stack>
+        </Button>
       </Stack>
       <Stack css={sx.chatContent}>{children}</Stack>
       <Stack
@@ -50,23 +64,21 @@ export const ChatFrame = ({ children }: ChatFrameType) => {
         justifyContent="space-between"
         alignItems="center"
       >
-        <Input
+        <TextField
           css={sx.message}
-          disableUnderline={true}
+          multiline
+          variant="standard"
           placeholder="메시지를 입력하세요."
-          sx={{
-            input: {
-              color: "white",
-              "&::placeholder": {
-                color: "white",
-                opacity: 1,
-              },
-            },
+          InputProps={{
+            disableUnderline: true,
+            style: { color: "white" },
           }}
         />
 
         <div css={sx.send}>
-          <Image src={send} alt="send" width={24} height={24} />
+          <Button css={sx.sendbtn}>
+            <Image src={send} alt="send" width={24} height={24} />
+          </Button>
         </div>
       </Stack>
     </Stack>
@@ -84,6 +96,16 @@ const sx = {
   `,
   menuBtn: css`
     min-width: 0;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+  `,
+  pdfButton: css`
+    padding: 0;
+    min-width: fit-content;
+    &:hover {
+      background-color: transparent;
+    }
   `,
   openFile: css`
     border-left: solid 1px #fff;
@@ -103,13 +125,20 @@ const sx = {
     padding-left: 20px;
   `,
   message: css`
-    &::placeholder {
-      color: red;
-    }
+    width: 100%;
+    outline: none;
+    padding-right: 20px;
+    /* border-right: solid 1px #fff; */
   `,
   send: css`
     padding: 20px;
     height: 100%;
     border-left: solid 1px #fff;
+    width: 63.99px;
+    display: flex;
+  `,
+  sendbtn: css`
+    min-width: fit-content;
+    padding: 0;
   `,
 };

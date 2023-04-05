@@ -24,7 +24,7 @@ const sx = {
     background: ${Color.chatBackground};
     border-radius: 20px 0px 20px 20px;
     padding: 10px;
-    max-width: 412px;
+    max-width: 60%;
   `,
   textFromMeWrap: css`
     justify-content: flex-end;
@@ -43,7 +43,7 @@ const sx = {
     border-radius: 0px 20px 20px 20px;
     border: solid 1px ${Color.chatBackground};
     padding: 10px;
-    width: 150px;
+    max-width: 60%;
   `,
 };
 

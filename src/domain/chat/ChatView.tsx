@@ -2,7 +2,7 @@ import { css } from "@emotion/react";
 import { Color } from "@/common/theme/colors";
 import { ChatFromMe } from "./el/ChatText";
 import { ChatFromAI } from "./el/ChatText";
-import { ChatFrame } from "./el/CharFrame";
+import { ChatFrame } from "./el/ChatFrame";
 import { HeaderView } from "@/common/el/Header/HeaderView";
 import character from "@/assets/images/chat_chr.png";
 import Image from "next/image";
