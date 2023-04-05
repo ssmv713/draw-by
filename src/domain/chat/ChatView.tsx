@@ -38,8 +38,6 @@ export const ChatView = () => {
           <ChatFromAI textFromAI="오늘 날씨는 맑아요" />
           <ChatFromMe textFromMe="오늘 날씨 어때?" />
           <ChatFromMe textFromMe="오늘 날씨 어때?" />
-          <ChatFromMe textFromMe="오늘 날씨 어때?" />
-          <ChatFromMe textFromMe="오늘 날씨 어때?" />
           <ChatFromAI textFromAI="오늘 날씨는 맑아요" />
           <ChatFromMe textFromMe="오늘 날씨 어때?" />
           <ChatFromMe textFromMe="오늘 날씨 어때?" />

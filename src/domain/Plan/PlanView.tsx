@@ -66,7 +66,7 @@ const sx = {
     height: 100%;
     justify-content: center;
 
-    @media ${Mq.sm} {
+    @media ${Mq.lg} {
       padding: 40px;
     }
   `,
