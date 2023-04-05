@@ -87,7 +87,7 @@ const sx = {
   `,
   topChat: css`
     border: solid 1px #fff;
-    padding: 0 23px;
+    padding-left: 23px;
   `,
   menuBtn: css`
     min-width: 0;
@@ -105,7 +105,7 @@ const sx = {
   openFile: css`
     border-left: solid 1px #fff;
     height: 100%;
-    padding: 17px 0 17px 20px;
+    padding: 17px 20px 17px 20px;
   `,
   chatContent: css`
     padding: 60px;
