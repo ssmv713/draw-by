@@ -58,12 +58,7 @@ export const ChatFrame = ({ children }: ChatFrameType) => {
         </Button>
       </Stack>
       <Stack css={sx.chatContent}>{children}</Stack>
-      <Stack
-        css={sx.chatBottom}
-        direction="row"
-        justifyContent="space-between"
-        alignItems="center"
-      >
+      <div css={sx.chatBottom}>
         <TextField
           css={sx.message}
           multiline
@@ -74,13 +69,12 @@ export const ChatFrame = ({ children }: ChatFrameType) => {
             style: { color: "white" },
           }}
         />
-
-        <div css={sx.send}>
-          <Button css={sx.sendbtn}>
+        <Button css={sx.sendbtn}>
+          <div css={sx.send}>
             <Image src={send} alt="send" width={24} height={24} />
-          </Button>
-        </div>
-      </Stack>
+          </div>
+        </Button>
+      </div>
     </Stack>
   );
 };
@@ -89,6 +83,7 @@ const sx = {
   chat: css`
     max-width: 1000px;
     margin: 0 auto;
+    height: calc(100vh - 62px);
   `,
   topChat: css`
     border: solid 1px #fff;
@@ -97,7 +92,7 @@ const sx = {
   menuBtn: css`
     min-width: 0;
     &:hover {
-      background-color: rgba(0, 0, 0, 0.2);
+      background-color: ${Color.hoverDark};
     }
   `,
   pdfButton: css`
@@ -116,6 +111,22 @@ const sx = {
     padding: 60px;
     border-left: solid 1px #fff;
     border-right: solid 1px #fff;
+    overflow-y: scroll;
+    ::-webkit-scrollbar {
+      background-color: transparent;
+      width: 20px;
+    }
+    ::-webkit-scrollbar-thumb {
+      /* background-color: rgba(255, 255, 255, 0.6);
+      border-radius: 5px;
+      margin-right: 10px;
+      width: 6px; */
+      border: 7px solid rgba(0, 0, 0, 0);
+      background-clip: padding-box;
+      border-radius: 999px;
+      background-color: rgba(255, 255, 255, 0.6);
+    }
+
     @media ${Mq.sm} {
       padding: 40px 20px 120px 20px;
     }
@@ -123,22 +134,33 @@ const sx = {
   chatBottom: css`
     border: solid 1px #fff;
     padding-left: 20px;
+    display: grid;
+    grid-template-columns: auto 64px;
+    grid-template-rows: auto;
   `,
   message: css`
     width: 100%;
     outline: none;
     padding-right: 20px;
-    /* border-right: solid 1px #fff; */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
   `,
   send: css`
     padding: 20px;
     height: 100%;
     border-left: solid 1px #fff;
     width: 63.99px;
+    flex: 1;
     display: flex;
+    align-items: center;
   `,
   sendbtn: css`
     min-width: fit-content;
     padding: 0;
+    &:hover {
+      background-color: ${Color.hoverDark};
+    }
   `,
 };

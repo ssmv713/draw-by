@@ -16,6 +16,7 @@ export enum Color {
 
   backgroundGray = "#F7F7F7",
   chatBackground = "#f7ebfc",
+  hoverDark = "rgba(0, 0, 0, 0.2)",
 }
 
 export const lightPalette: PaletteOptions = {};
