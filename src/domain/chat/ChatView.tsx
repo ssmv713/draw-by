@@ -54,7 +54,7 @@ const sx = {
     background-size: cover;
     min-height: 100vh;
     background-position: center;
-    padding-top: 62px;
+    padding-top: 70px;
     position: relative;
   `,
   chr: css`
