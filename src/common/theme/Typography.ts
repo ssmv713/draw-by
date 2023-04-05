@@ -17,6 +17,9 @@ export const baseTypographyOptions: TypographyOptions = {
   h2: {
     fontSize: "32px", //100
     fontWeight: "700",
+    "@media (max-width:576px)": {
+      fontSize: "24px ",
+    },
   },
   h3: {
     fontSize: "44px",
@@ -34,6 +37,9 @@ export const baseTypographyOptions: TypographyOptions = {
   body1: {
     fontSize: "20px",
     fontWeight: "500",
+    "@media (max-width:576px)": {
+      fontSize: "16px ",
+    },
   },
   body2: {
     fontSize: "16px", //40
@@ -41,6 +47,9 @@ export const baseTypographyOptions: TypographyOptions = {
   },
   subtitle1: {
     fontSize: "12px",
+  },
+  subtitle2: {
+    fontSize: "20px",
   },
 };
 

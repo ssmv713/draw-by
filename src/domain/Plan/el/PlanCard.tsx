@@ -40,7 +40,7 @@ export const PlanCard = ({ question, title, models }: PlanCardType) => {
           </Stack>
         ))}
       </Stack>
-      <Typography variant={isExtraSmall ? "h5" : "h2"} css={sx.free}>
+      <Typography variant={isExtraSmall ? "subtitle2" : "h2"} css={sx.free}>
         무료
       </Typography>
     </Stack>
