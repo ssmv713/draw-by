@@ -117,10 +117,6 @@ const sx = {
       width: 20px;
     }
     ::-webkit-scrollbar-thumb {
-      /* background-color: rgba(255, 255, 255, 0.6);
-      border-radius: 5px;
-      margin-right: 10px;
-      width: 6px; */
       border: 7px solid rgba(0, 0, 0, 0);
       background-clip: padding-box;
       border-radius: 999px;

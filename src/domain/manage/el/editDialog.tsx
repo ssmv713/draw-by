@@ -1,4 +1,4 @@
-import { Button, Dialog, Stack, Typography } from "@mui/material";
+import { Button, Dialog, Stack, TextField, Typography } from "@mui/material";
 import Image from "next/image";
 import closeIcon from "@/assets/icons/close.png";
 import { Color } from "@/common/theme/colors";
@@ -32,13 +32,21 @@ export const EditDialog = ({ open, onClose }: EditDialogType) => {
             />
           </Button>
         </Stack>
-        <Stack my="40px" css={sx.fileName} gap="6px" pb="8px">
+        <Stack my="40px" css={sx.fileName} gap="6px">
           <Typography color={Color.GrayText} variant="body2">
             {"신규 파일명"}
           </Typography>
-          <Typography variant="body1" color={Color.GrayText2}>
+          {/* <Typography variant="body1" color={Color.GrayText2}>
             {"FileName.pdf"}
-          </Typography>
+          </Typography> */}
+          <TextField
+            variant="standard"
+            defaultValue="FileName.pdf"
+            InputProps={{
+              disableUnderline: true,
+              style: { color: "#DADADA" },
+            }}
+          />
         </Stack>
         <Stack direction="row" gap="10px" justifyContent="flex-end">
           <Image src={check} alt="check" width={24} height={24} />
