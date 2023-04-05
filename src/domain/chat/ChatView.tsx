@@ -1,11 +1,12 @@
 import { css } from "@emotion/react";
 import { Color } from "@/common/theme/colors";
-import { ChatFromMe } from "./el/ChatText";
+import { AIQuestion, ChatFromMe } from "./el/ChatText";
 import { ChatFromAI } from "./el/ChatText";
 import { ChatFrame } from "./el/ChatFrame";
 import { HeaderView } from "@/common/el/Header/HeaderView";
 import character from "@/assets/images/chat_chr.png";
 import Image from "next/image";
+import { QuestionModels } from "./el/model";
 
 export const ChatView = () => {
   return (
@@ -21,7 +22,10 @@ export const ChatView = () => {
       <ChatFrame>
         <div>
           <ChatFromMe textFromMe="오늘 날씨 어때?" />
-          <ChatFromAI textFromAI="오늘 날씨는 맑아요" />
+          <AIQuestion
+            textFromAI="AI에게 질문해보세요 : "
+            questions={QuestionModels}
+          />
           <ChatFromMe
             textFromMe="가나다라마바사아자차카타파하 가나다라마바사아자차카타파하
 가나다라마바사아자차카타파하."
@@ -34,7 +38,7 @@ export const ChatView = () => {
           <ChatFromAI textFromAI="오늘 날씨는 맑아요" />
           <ChatFromMe textFromMe="오늘 날씨 어때?" />
           <ChatFromMe textFromMe="오늘 날씨 어때?" />
-          <ChatFromAI textFromAI="오늘 날씨는 맑아요" />
+
           <ChatFromMe textFromMe="오늘 날씨 어때?" />
           <ChatFromMe textFromMe="오늘 날씨 어때?" />
           <ChatFromAI textFromAI="오늘 날씨는 맑아요" />

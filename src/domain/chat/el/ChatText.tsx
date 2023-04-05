@@ -1,4 +1,4 @@
-import { Stack, Typography } from "@mui/material";
+import { Button, Stack, Typography } from "@mui/material";
 import { css } from "@emotion/react";
 import { Color } from "@/common/theme/colors";
 import Image from "next/image";
@@ -45,6 +45,12 @@ const sx = {
     padding: 10px;
     max-width: 60%;
   `,
+  questionBtn: css`
+    justify-content: flex-start;
+    &:hover {
+      background-color: ${Color.hoverDark};
+    }
+  `,
 };
 
 type ChatFromAIType = {
@@ -57,6 +63,31 @@ export const ChatFromAI = ({ textFromAI }: ChatFromAIType) => {
       <Typography variant="body2" color={Color.WhiteText} css={sx.textFromAI}>
         {textFromAI}
       </Typography>
+    </Stack>
+  );
+};
+
+type AIQuestionType = {
+  textFromAI: string;
+  questions: string[];
+};
+
+export const AIQuestion = ({ textFromAI, questions }: AIQuestionType) => {
+  return (
+    <Stack direction="row" gap="10px" css={sx.chatFromaIWrap}>
+      <Image src={profile} alt="profile" width={40} height={40} />
+      <Stack css={sx.textFromAI}>
+        <Typography variant="body2" color={Color.WhiteText}>
+          {textFromAI}
+        </Typography>
+        {questions.map((it, index) => (
+          <Button key={index} css={sx.questionBtn}>
+            <Typography variant="h4" color={Color.WhiteText}>
+              {it}
+            </Typography>
+          </Button>
+        ))}
+      </Stack>
     </Stack>
   );
 };

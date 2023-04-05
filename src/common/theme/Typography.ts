@@ -25,8 +25,8 @@ export const baseTypographyOptions: TypographyOptions = {
     fontSize: "44px",
   },
   h4: {
-    fontSize: "3.125vw", //60
-    fontWeight: "400",
+    fontSize: "16px", //60
+    fontWeight: "600",
   },
   h5: {
     fontSize: "24px",
