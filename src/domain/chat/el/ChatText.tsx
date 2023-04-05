@@ -11,7 +11,7 @@ type chatFromMeType = {
 export const ChatFromMe = ({ textFromMe }: chatFromMeType) => {
   return (
     <Stack direction="row" gap="10px" css={sx.textFromMeWrap}>
-      <Typography color={Color.BlackText} css={sx.textFromMe}>
+      <Typography variant="body2" color={Color.BlackText} css={sx.textFromMe}>
         {textFromMe}
       </Typography>
       <Image src={profile} alt="profile" width={40} height={40} />
@@ -54,7 +54,7 @@ export const ChatFromAI = ({ textFromAI }: ChatFromAIType) => {
   return (
     <Stack direction="row" gap="10px" css={sx.chatFromaIWrap}>
       <Image src={profile} alt="profile" width={40} height={40} />
-      <Typography color={Color.WhiteText} css={sx.textFromAI}>
+      <Typography variant="body2" color={Color.WhiteText} css={sx.textFromAI}>
         {textFromAI}
       </Typography>
     </Stack>

@@ -8,6 +8,7 @@ import { Mq } from "../../theme/screen";
 import { useEffect, useState } from "react";
 import arrowDown_black from "@/assets/icons/arrowDown_black.png";
 import Link from "next/link";
+import { it } from "node:test";
 
 export const Pcheader = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -18,59 +19,42 @@ export const Pcheader = () => {
     window.addEventListener("scroll", updateScroll);
   });
 
+  const navModels = [
+    { link: "/upload", title: "업로드" },
+    { link: "/chat", title: "채팅" },
+    { link: "/manage", title: "PDF관리" },
+    { link: "/plan", title: "요금제" },
+  ];
+
   return (
-    <div css={sx.root} className={scrollPosition < 62 ? "" : "headerBg"}>
+    <div css={sx.root} className={scrollPosition < 12 ? "" : "headerBg"}>
       <div css={sx.inner}>
-        {scrollPosition < 62 ? <Logo /> : <PurpleLogo />}
+        {scrollPosition < 12 ? <Logo /> : <PurpleLogo />}
         <ul css={sx.nav}>
-          <li>
-            <Link href="/upload">
-              <Typography
-                variant="body2"
-                color={scrollPosition < 62 ? Color.WhiteText : Color.BlackText}
-              >
-                업로드
-              </Typography>
-            </Link>
-          </li>
-          <li>
-            <Link href="/chat">
-              <Typography
-                variant="body2"
-                color={scrollPosition < 62 ? Color.WhiteText : Color.BlackText}
-              >
-                채팅
-              </Typography>
-            </Link>
-          </li>
-          <li>
-            <Link href="/manage">
-              <Typography
-                variant="body2"
-                color={scrollPosition < 62 ? Color.WhiteText : Color.BlackText}
-              >
-                PDF관리
-              </Typography>
-            </Link>
-          </li>{" "}
-          <li>
-            <Typography
-              variant="body2"
-              color={scrollPosition < 62 ? Color.WhiteText : Color.BlackText}
-            >
-              요금제
-            </Typography>
-          </li>
+          {navModels.map((it, index) => (
+            <li key={index}>
+              <Link href={it.link}>
+                <Typography
+                  variant="body2"
+                  color={
+                    scrollPosition < 12 ? Color.WhiteText : Color.BlackText
+                  }
+                >
+                  {it.title}
+                </Typography>
+              </Link>
+            </li>
+          ))}
         </ul>
         <div css={sx.nameBtn}>
           <Typography
             variant="body2"
-            color={scrollPosition < 62 ? Color.WhiteText : Color.BlackText}
+            color={scrollPosition < 12 ? Color.WhiteText : Color.BlackText}
           >
             홍길동님
           </Typography>
           <Image
-            src={scrollPosition < 62 ? arrowDown : arrowDown_black}
+            src={scrollPosition < 12 ? arrowDown : arrowDown_black}
             alt="down"
             width={9}
             height={5}

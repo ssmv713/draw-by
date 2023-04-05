@@ -5,6 +5,7 @@ export enum Color {
   GrayText = "#989898",
   GrayText2 = "#dadada",
   GrayText3 = "#bbb",
+  GrayText4 = "#6e6e6e",
   LightGrayText = "#EEEEEE",
   WhiteText = "#ffffff ",
 

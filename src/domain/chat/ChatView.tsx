@@ -43,6 +43,7 @@ const sx = {
   root: css`
     background-image: url(/assets/bg/chat_bg.png);
     background-size: cover;
+    min-height: 100vh;
     background-position: center;
     padding-top: 62px;
     position: relative;
