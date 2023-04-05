@@ -34,6 +34,21 @@ export const uploadModels = [
     dates: "2023.03.27 23:59:59",
     ID: "a1234567890",
   },
+  {
+    fileName: "FileName.pdf",
+    dates: "2023.03.27 23:59:59",
+    ID: "a1234567890",
+  },
+  {
+    fileName: "FileName.pdf",
+    dates: "2023.03.27 23:59:59",
+    ID: "a1234567890",
+  },
+  {
+    fileName: "FileName.pdf",
+    dates: "2023.03.27 23:59:59",
+    ID: "a1234567890",
+  },
 ];
 
 export const detailModels = [

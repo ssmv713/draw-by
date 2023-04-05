@@ -60,38 +60,45 @@ export const ManageView = () => {
             <span css={sx.menuTitle}>파일 ID</span>
           </div>
         )}
-        {uploadModels.map((it, index) => (
-          <>
-            {isMedium ? (
-              <Button css={sx.mbBtn} onClick={handleClickOpen}>
-                <Stack direction="row" alignItems="center" css={sx.btnInner}>
-                  <Stack direction="row" alignItems="center" gap="12px">
-                    <Image src={pdf} alt="pdf" width={24} height={24} />
-                    <Typography>{it.fileName}</Typography>
+        <Stack css={sx.content}>
+          {uploadModels.map((it, index) => (
+            <>
+              {isMedium ? (
+                <Button css={sx.mbBtn} onClick={handleClickOpen}>
+                  <Stack direction="row" alignItems="center" css={sx.btnInner}>
+                    <Stack direction="row" alignItems="center" gap="12px">
+                      <Image src={pdf} alt="pdf" width={24} height={24} />
+                      <Typography>{it.fileName}</Typography>
+                    </Stack>
+                    <Image
+                      src={arrowRight}
+                      alt="arrow"
+                      width={24}
+                      height={24}
+                    />
                   </Stack>
-                  <Image src={arrowRight} alt="arrow" width={24} height={24} />
-                </Stack>
-              </Button>
-            ) : (
-              <Button
-                css={sx.button}
-                key={index}
-                onClick={handleClickOpen}
-                sx={{ borderRadius: 0 }}
-              >
-                <Typography color={Color.BlackText} variant="body2">
-                  {it.fileName}
-                </Typography>
-                <Typography color={Color.GrayText3} variant="body2">
-                  {it.dates}
-                </Typography>
-                <Typography color={Color.GrayText3} variant="body2">
-                  {it.ID}
-                </Typography>
-              </Button>
-            )}
-          </>
-        ))}
+                </Button>
+              ) : (
+                <Button
+                  css={sx.button}
+                  key={index}
+                  onClick={handleClickOpen}
+                  sx={{ borderRadius: 0 }}
+                >
+                  <Typography color={Color.BlackText} variant="body2">
+                    {it.fileName}
+                  </Typography>
+                  <Typography color={Color.GrayText3} variant="body2">
+                    {it.dates}
+                  </Typography>
+                  <Typography color={Color.GrayText3} variant="body2">
+                    {it.ID}
+                  </Typography>
+                </Button>
+              )}
+            </>
+          ))}
+        </Stack>
         <Stack direction="row" p="20px" justifyContent="space-between">
           <Typography
             variant={isSmall ? "subtitle1" : "body1"}
@@ -147,7 +154,7 @@ const sx = {
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     padding-top: 62px;
     padding-bottom: 100px;
     @media ${Mq.sm} {
@@ -173,6 +180,10 @@ const sx = {
   menuTitle: css`
     color: ${Color.GrayText};
     font-size: 12px;
+  `,
+  content: css`
+    overflow-y: scroll;
+    height: calc(100vh - 500px);
   `,
   btnInner: css`
     justify-content: space-between;
