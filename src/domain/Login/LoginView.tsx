@@ -27,7 +27,7 @@ export const LoginView = () => {
           css={sx.desc}
           textAlign="center"
           color={isExtraSmall ? Color.LightGrayText : Color.GrayText}
-          variant="body1"
+          variant={isExtraSmall ? "body2" : "body1"}
         >
           {title.desc}
         </Typography>
