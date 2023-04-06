@@ -194,6 +194,9 @@ const sx = {
       border-radius: 999px;
       background-color: rgba(175, 165, 165, 0.219);
     }
+    @media ${Mq.sm} {
+      height: calc(100vh - 350px);
+    }
   `,
   btnInner: css`
     justify-content: space-between;
