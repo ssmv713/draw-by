@@ -184,6 +184,16 @@ const sx = {
   content: css`
     overflow-y: scroll;
     height: calc(100vh - 500px);
+    ::-webkit-scrollbar {
+      background-color: transparent;
+      width: 20px;
+    }
+    ::-webkit-scrollbar-thumb {
+      border: 7px solid rgba(0, 0, 0, 0);
+      background-clip: padding-box;
+      border-radius: 999px;
+      background-color: rgba(175, 165, 165, 0.219);
+    }
   `,
   btnInner: css`
     justify-content: space-between;
