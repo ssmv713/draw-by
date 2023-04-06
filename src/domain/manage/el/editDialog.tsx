@@ -36,15 +36,12 @@ export const EditDialog = ({ open, onClose }: EditDialogType) => {
           <Typography color={Color.GrayText} variant="body2">
             {"신규 파일명"}
           </Typography>
-          {/* <Typography variant="body1" color={Color.GrayText2}>
-            {"FileName.pdf"}
-          </Typography> */}
+
           <TextField
             variant="standard"
-            defaultValue="FileName.pdf"
+            placeholder="FileName.pdf"
             InputProps={{
               disableUnderline: true,
-              style: { color: "#DADADA" },
             }}
           />
         </Stack>

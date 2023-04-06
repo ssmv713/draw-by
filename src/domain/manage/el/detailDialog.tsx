@@ -56,7 +56,7 @@ export const DetailDialog = ({
         <Stack
           direction="row"
           mt={isSmall ? "40px " : "48px"}
-          justifyContent={isSmall ? "space-between" : "flex-end"}
+          justifyContent="flex-end"
           gap={isSmall ? "0" : "48px"}
         >
           <Button onClick={handleEditOpen}>
@@ -70,7 +70,7 @@ export const DetailDialog = ({
                 color={Color.Navy}
                 variant={isSmall ? "body2" : "body1"}
               >
-                {"수정하기"}
+                {isSmall ? "" : "수정하기"}
               </Typography>
             </Stack>
           </Button>
@@ -85,7 +85,7 @@ export const DetailDialog = ({
                 color={Color.BrandMain}
                 variant={isSmall ? "body2" : "body1"}
               >
-                {"삭제하기"}
+                {isSmall ? "" : "삭제하기"}
               </Typography>
             </Stack>
           </Button>
