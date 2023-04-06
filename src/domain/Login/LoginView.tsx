@@ -6,6 +6,7 @@ import Image from "next/image";
 import { SNSModels } from "./model";
 import { Stack } from "@mui/system";
 import { Mq, useCustomMediaQuery } from "@/common/theme/screen";
+import Link from "next/link";
 
 export const LoginView = () => {
   const title = {
@@ -33,22 +34,21 @@ export const LoginView = () => {
         </Typography>
         <Stack css={sx.snsWrap}>
           {SNSModels.map((it, index) => (
-            <Button
-              css={sx.button(it.bgColor, it.border, it.hoverColor)}
-              key={index}
-            >
-              <Image
-                css={sx.logo}
-                src={it.logo}
-                alt="naver"
-                width={18}
-                height={18}
-              />
+            <Link href="/upload" key={index}>
+              <Button css={sx.button(it.bgColor, it.border, it.hoverColor)}>
+                <Image
+                  css={sx.logo}
+                  src={it.logo}
+                  alt="naver"
+                  width={18}
+                  height={18}
+                />
 
-              <Typography css={sx.btnText} variant="h6" color={it.textColor}>
-                {it.text}
-              </Typography>
-            </Button>
+                <Typography css={sx.btnText} variant="h6" color={it.textColor}>
+                  {it.text}
+                </Typography>
+              </Button>
+            </Link>
           ))}
         </Stack>
       </div>
