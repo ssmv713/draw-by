@@ -7,7 +7,7 @@ import { Color } from "@/common/theme/colors";
 import time from "@/assets/icons/time.png";
 import arrow from "@/assets/icons/arrowRight_purple.png";
 import { documentModel } from "./model";
-import { Mq } from "@/common/theme/screen";
+import { Mq, useCustomMediaQuery } from "@/common/theme/screen";
 
 type UploadDialogType = {
   open: boolean;
@@ -15,6 +15,7 @@ type UploadDialogType = {
 };
 
 export const UploadDialog = ({ open, onClose }: UploadDialogType) => {
+  const { isSmall } = useCustomMediaQuery();
   return (
     <Dialog open={open} fullWidth css={sx.root}>
       <div css={sx.dialog}>
@@ -27,7 +28,12 @@ export const UploadDialog = ({ open, onClose }: UploadDialogType) => {
         >
           <Typography variant="h2">{"문서목록"}</Typography>
           <Button onClick={onClose}>
-            <Image src={closeIcon} alt="close" width={48} height={48} />
+            <Image
+              src={closeIcon}
+              alt="close"
+              width={isSmall ? 24 : 48}
+              height={isSmall ? 24 : 48}
+            />
           </Button>
         </Stack>
         {documentModel.map((it, index) => (
@@ -68,7 +74,7 @@ const sx = {
   dialog: css`
     width: 100%;
     padding: 60px;
-    @media ${Mq.lg} {
+    @media ${Mq.md} {
       padding: 16px;
     }
   `,

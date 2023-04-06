@@ -53,8 +53,10 @@ const sx = {
     padding: 40px;
     width: 480px;
     border-radius: 20px;
+
     @media ${Mq.sm} {
       width: 100%;
+      padding: 20px;
     }
   `,
   planContent: css`

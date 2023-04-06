@@ -47,6 +47,7 @@ const sx = {
   `,
   questionBtn: css`
     justify-content: flex-start;
+    text-align: left;
     &:hover {
       background-color: ${Color.hoverDark};
     }

@@ -167,8 +167,10 @@ const sx = {
     background-color: #fff;
     border-radius: 20px;
     margin: 67px auto;
+
     @media ${Mq.sm} {
       margin: 0 auto;
+      height: calc(100vh - 62px);
     }
   `,
   menu: css`
@@ -195,7 +197,8 @@ const sx = {
       background-color: rgba(175, 165, 165, 0.219);
     }
     @media ${Mq.sm} {
-      height: calc(100vh - 350px);
+      /* height: calc(100vh - 350px); */
+      height: 100%;
     }
   `,
   btnInner: css`
