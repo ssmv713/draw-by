@@ -9,16 +9,22 @@ type PcFooterType = {
 };
 
 export const PcFooter = ({ position }: PcFooterType) => {
-  const navModels = ["My Account", "Contact", "Terms", "Twitter", "Pricing"];
+  const navModels = [
+    { name: "My Account", link: "javascript:void(0);" },
+    { name: "Contact", link: "javascript:void(0);" },
+    { name: "Terms", link: "/terms" },
+    { name: "Twitter", link: "javascript:void(0);" },
+    { name: "Pricing", link: "javascript:void(0);" },
+  ];
 
   return (
     <div css={sx.root(position)}>
       <ul css={sx.inner}>
         {navModels.map((it, index) => (
           <li key={index}>
-            <Link href="javascript:void(0);">
+            <Link href={it.link}>
               <Typography color={Color.WhiteText} variant="subtitle1">
-                {it}
+                {it.name}
               </Typography>
             </Link>
           </li>
