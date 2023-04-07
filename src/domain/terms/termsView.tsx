@@ -10,7 +10,7 @@ export const TermsView = () => {
   return (
     <div css={sx.root}>
       <ManageHeaderView />
-      <Stack p={isSmall ? "0" : "60px"} css={sx.dialog}>
+      <Stack p={isSmall ? "20px" : "60px"} css={sx.dialog}>
         <Typography
           variant="h2"
           color={Color.BlackText}
