@@ -16,7 +16,7 @@ export const PcFooter = ({ position }: PcFooterType) => {
       <ul css={sx.inner}>
         {navModels.map((it, index) => (
           <li key={index}>
-            <Link href="#">
+            <Link href="javascript:void(0);">
               <Typography color={Color.WhiteText} variant="subtitle1">
                 {it}
               </Typography>
