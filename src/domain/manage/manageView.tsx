@@ -10,6 +10,7 @@ import Image from "next/image";
 import arrowRight from "@/assets/icons/arrowRight_gray.png";
 import { ManageHeaderView } from "@/common/el/Header/manageHeaderView";
 import { useManageView } from "./el/useManageView";
+import { PcFooter } from "@/common/el/footer/PcFooter";
 
 export const ManageView = () => {
   const {
@@ -144,6 +145,7 @@ export const ManageView = () => {
           }}
         />
       </Stack>
+      <PcFooter position={isSmall ? "relative" : "fixed"} />
     </div>
   );
 };
@@ -185,7 +187,7 @@ const sx = {
   `,
   content: css`
     overflow-y: scroll;
-    height: calc(100vh - 500px);
+    height: calc(100vh - 607px);
     ::-webkit-scrollbar {
       background-color: transparent;
       width: 20px;

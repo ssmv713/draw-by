@@ -5,13 +5,14 @@ import { Typography } from "@mui/material";
 import { Stack } from "@mui/system";
 import { PlanCard, PlanModels1, PlanModels2 } from "./el";
 import { Mq, useCustomMediaQuery } from "@/common/theme/screen";
+import { PcFooter } from "@/common/el/footer/PcFooter";
 
 export const PlanView = () => {
   const title = {
     main: "가격안내",
     desc: "비즈니스 단계에 따라 합리적인 플랜을 선택하세요 ",
   };
-  const { isSmall } = useCustomMediaQuery();
+  const { isSmall, isLarge } = useCustomMediaQuery();
   return (
     <div css={sx.root}>
       <HeaderView />
@@ -45,21 +46,26 @@ export const PlanView = () => {
           />
         </Stack>
       </Stack>
+      <PcFooter position={isLarge ? "absolute" : "fixed"} />
     </div>
   );
 };
 
 const sx = {
   root: css`
+    position: relative;
     height: 100vh;
     width: 100%;
     background-image: url(/assets/bg/chat_bg.png);
     background-size: cover;
     background-position: center;
     padding-top: 62px;
-
+    padding-bottom: 102px;
     @media ${Mq.lg} {
       height: 100%;
+    }
+    @media ${Mq.sm} {
+      padding-bottom: 266px;
     }
   `,
   content: css`

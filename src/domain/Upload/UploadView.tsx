@@ -1,3 +1,4 @@
+import { PcFooter } from "@/common/el/footer/PcFooter";
 import { useCustomMediaQuery } from "@/common/theme/screen";
 
 import {
@@ -16,6 +17,7 @@ export const UploadView = () => {
       <FirstSection />
       <SecondSection />
       <ThirdSection />
+      <PcFooter position="relative" />
     </div>
   );
 };
