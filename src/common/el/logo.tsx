@@ -23,6 +23,7 @@ const sx = {
   logo: css`
     display: flex;
     gap: 10px;
+    align-items: center;
   `,
   logoImg: css`
     width: 30px;
@@ -35,12 +36,14 @@ const sx = {
 export const PurpleLogo = () => {
   return (
     <>
-      <div css={sx.logo}>
-        <div css={ppl.logoImg}></div>
-        <Typography color={Color.BrandMain} variant="body1">
-          DrawBy
-        </Typography>
-      </div>
+      <Link href="/upload">
+        <div css={sx.logo}>
+          <div css={ppl.logoImg}></div>
+          <Typography color={Color.BrandMain} variant="body1">
+            DrawBy
+          </Typography>
+        </div>
+      </Link>
     </>
   );
 };

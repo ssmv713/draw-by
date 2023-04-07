@@ -5,6 +5,7 @@ import menu_black from "@/assets/icons/menu_black.png";
 import { Button } from "@mui/material";
 import { MobileMenu } from "../mobileMenu";
 import { useState } from "react";
+import Link from "next/link";
 
 export const ManageMobileHeader = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,6 +19,7 @@ export const ManageMobileHeader = () => {
     <div css={sx.root} className="headerBg">
       <MobileMenu open={menuOpen} onClose={handleClose} />
       <PurpleLogo />
+
       <Button onClick={handleClickOpen}>
         <Image src={menu_black} alt="menu" width={24} height={24} />
       </Button>
