@@ -61,10 +61,11 @@ const sx = {
     justify-content: space-between;
     & li {
       display: flex;
+      align-items: center;
     }
     & li:not(:last-child)::after {
       content: "·";
-      margin: 0 30px;
+      margin: 0 29px;
       float: right;
       display: block;
       color: #fff;
