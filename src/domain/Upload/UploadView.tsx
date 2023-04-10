@@ -1,5 +1,6 @@
 import { PcFooter } from "@/common/el/footer/PcFooter";
 import { useCustomMediaQuery } from "@/common/theme/screen";
+import { css } from "@emotion/react";
 
 import {
   FirstSection,
@@ -12,7 +13,7 @@ import {
 export const UploadView = () => {
   const { isSmall } = useCustomMediaQuery();
   return (
-    <div>
+    <div css={sx.root}>
       {isSmall ? <MobileMainSection /> : <MainSection />}
       <FirstSection />
       <SecondSection />
@@ -22,4 +23,8 @@ export const UploadView = () => {
   );
 };
 
-const sx = {};
+const sx = {
+  root: css`
+    height: 100%;
+  `,
+};

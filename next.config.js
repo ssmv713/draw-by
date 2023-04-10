@@ -8,6 +8,10 @@ const nextConfig = {
       labelFormat: "[dirname]-[filename]-[local]",
     },
   },
+  images: {
+    unoptimized: true,
+  },
+  trailingSlash: true,
 };
 
 module.exports = nextConfig;
