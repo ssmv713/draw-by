@@ -1,7 +1,6 @@
 import { Color } from "@/common/theme/colors";
 import { css } from "@emotion/react";
 import { Button, Typography } from "@mui/material";
-import naver from "@/assets/logos/naver.png";
 import Image from "next/image";
 import { SNSModels } from "./model";
 import { Stack } from "@mui/system";

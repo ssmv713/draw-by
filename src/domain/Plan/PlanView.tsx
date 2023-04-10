@@ -19,7 +19,7 @@ export const PlanView = () => {
       <Stack
         alignItems="center"
         css={sx.content}
-        gap={isSmall ? "20px" : "132px"}
+        gap={isSmall ? "20px" : "44px"}
       >
         <Stack alignItems="center" gap="20px">
           <Typography color={Color.WhiteText} variant="h1">

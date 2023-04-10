@@ -5,7 +5,7 @@ export const baseTypographyOptions: TypographyOptions = {
   fontFamily: "Pretendard-Regular",
 
   allVariants: {
-    whiteSpace: "pre-wrap",
+    // whiteSpace: "pre-wrap",
   },
   h1: {
     fontSize: "40px", //160
@@ -56,7 +56,7 @@ export const baseTypographyOptions: TypographyOptions = {
 export const darkTypographyOptions: TypographyOptions = {
   ...baseTypographyOptions,
   allVariants: {
-    whiteSpace: "pre-wrap",
+    // whiteSpace: "pre-wrap",
     color: "#fff",
   },
 };
@@ -64,7 +64,6 @@ export const darkTypographyOptions: TypographyOptions = {
 export const lightTypographyOptions: TypographyOptions = {
   ...baseTypographyOptions,
   allVariants: {
-    whiteSpace: "pre-wrap",
     color: "#222",
   },
 };

@@ -44,6 +44,7 @@ export const SectionLayout1 = ({ desc }: SectionLayoutType) => {
           </AccordionDetails>
         </Accordion>
         <Typography
+          whiteSpace="pre-wrap"
           color={Color.GrayText}
           variant={isSmall ? "body2" : "body1"}
         >

@@ -28,6 +28,7 @@ export const SectionLayout2 = ({ desc }: SectionLayoutType) => {
       </Typography>
       <Stack direction="row" css={sx.content}>
         <Typography
+          whiteSpace="pre-wrap"
           color={Color.GrayText}
           variant={isSmall ? "body2" : "body1"}
         >
